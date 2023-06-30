@@ -1,0 +1,5 @@
+uvicorn==0.22.0
+fastapi==0.98.0
+redis-om==0.1.2
+python-dotenv==1.0.0
+requests==2.31.0
