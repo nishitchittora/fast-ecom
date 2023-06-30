@@ -45,7 +45,7 @@ class ProductsData(List[ProductData]):
 
 @app.get("/products", status_code=status.HTTP_200_OK, response_model=ProductsData)
 def all_products():
-    # return ProductData(data=[Product.get(pk) for pk in Product.all_pks()], many=True).data
+    # return ProductData(data=[Product.get(pk).dict() for pk in Product.all_pks()], many=True).data
     return [format(pk) for pk in Product.all_pks()]
 
 
